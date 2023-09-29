@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sound Button with Start and Stop</title>
+</head>
+<body>
+
+	<div>
+<div id="sound-container">
+  <button id="play-button">Play Sound</button>
+  <button id="stop-button" disabled>Stop Sound</button>
+</div>
+<audio id="sound">
+  <source src="musik/musik.mp3.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+const soundButton = document.getElementById('play-button');
+const stopButton = document.getElementById('stop-button');
+const sound = document.getElementById('sound');
+
+soundButton.addEventListener('click', () => {
+  sound.play();
+  soundButton.disabled = true;
+  stopButton.disabled = false;
+});
+
+stopButton.addEventListener('click', () => {
+  sound.pause();
+  sound.currentTime = 0;
+  soundButton.disabled = false;
+  stopButton.disabled = true;
+});
+
+sound.addEventListener('ended', () => {
+  soundButton.disabled = false;
+  stopButton.disabled = true;
+});
+</script>
+</div>
+
+
+
+
+
+<div>
+<div id="sound-container">
+  <button id="play-button1">Play Sound</button>
+  <button id="stop-button1" disabled>Stop Sound</button>
+</div>
+<audio id="sound">
+  <source src="musik/musik.mp3.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+const soundButton = document.getElementById('play-button1');
+const stopButton = document.getElementById('stop-button1');
+const sound = document.getElementById('sound');
+
+soundButton.addEventListener('click', () => {
+  sound.play();
+  soundButton.disabled = true;
+  stopButton.disabled = false;
+});
+
+stopButton.addEventListener('click', () => {
+  sound.pause();
+  sound.currentTime = 0;
+  soundButton.disabled = false;
+  stopButton.disabled = true;
+});
+
+sound.addEventListener('ended', () => {
+  soundButton.disabled = false;
+  stopButton.disabled = true;
+});
+</script>
+</div>
+
+
+
+
+</body>
+</html>

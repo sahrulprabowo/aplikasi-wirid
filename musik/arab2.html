@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Button</title>
+</head>
+<body>
+
+ <div>
+    <button id="playButton">Play Sound</button>
+    <button id="stopButton">Stop Sound</button>
+    
+    <script>
+        const audio = new Audio('musik/p.mp3'); // Replace with the actual path to your sound file
+        
+        const playButton = document.getElementById('playButton');
+        const stopButton = document.getElementById('stopButton');
+        
+        playButton.addEventListener('click', () => {
+            audio.play();
+        });
+        
+        stopButton.addEventListener('click', () => {
+            audio.pause();
+            audio.currentTime = 0;
+        });
+    </script>
+</div>
+
+
+
+
+<div>
+    <button id="play1">Play Sound</button>
+    <button id="stop1">Stop Sound</button>
+    
+    <script>
+        const audio = new Audio('musik/w.mp3'); // Replace with the actual path to your sound file
+        
+        const play1 = document.getElementById('play1');
+        const stop1 = document.getElementById('stop1');
+        
+        play1.addEventListener('click', () => {
+            audio.play();
+        });
+        
+        stop1.addEventListener('click', () => {
+            audio.pause();
+            audio.currentTime = 0;
+        });
+    </script>
+</div>
+
+    
+
+    
+</body>
+</html>
